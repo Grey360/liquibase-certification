@@ -24,11 +24,13 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
             <sqlCheck expectedResult="0">SELECT COUNT(*) FROM department1234 WHERE ID=2512</sqlCheck>
         </preConditions>
 
+        <!-- https://www.codingame.com/profile/68494673a384ff3a53e636d21d3ca1646287361 -->
         <insert tableName="department1234">
             <column name="id">2512</column>
             <column name="firstname">Gailor</column>
             <column name="lastname">PETEMOYA</column>
         </insert>
+        <!-- https://www.ruby-lang.org/en/about/ -->
         <insert tableName="department1234">
             <column name="id">1225</column>
             <column name="firstname">Yukihiro</column>
@@ -70,6 +72,14 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
         </createTable>
     </changeSet>
     <changeSet author="ultron (generated)" id="1604788072016-1">
+        <createTable tableName="TEST1" tablespace="SYSTEM">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ultron (generated)" id="1604788323692-1">
         <createTable tableName="TEST1" tablespace="SYSTEM">
             <column name="ID" type="NUMBER(*, 0)">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
