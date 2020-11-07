@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  oracle-db:
+    container_name: liquibase_certif
+    image: oracleinanutshell/oracle-xe-11g:latest
+    ports:
+      - 1521:1521
+      - 5500:5500
+    build:
+      context: .
+      args:
+        - ORACLE_ALLOW_REMOTE=true
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3
