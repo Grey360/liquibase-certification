@@ -1,0 +1,37 @@
+Reference Database: CERTIF_LIQ_TRGT @ jdbc:oracle:thin:@localhost:1521/XE (Default Schema: CERTIF_LIQ_TRGT)
+Comparison Database: CERTIF_LIQ_SRC @ jdbc:oracle:thin:@localhost:1521/XE (Default Schema: CERTIF_LIQ_SRC)
+Compared Schemas: CERTIF_LIQ_TRGT -> CERTIF_LIQ_SRC
+Product Name: EQUAL
+Product Version: EQUAL
+Missing Catalog(s): NONE
+Unexpected Catalog(s): NONE
+Changed Catalog(s): NONE
+Missing Column(s): 
+     CERTIF_LIQ_TRGT.TEST1.ID
+     CERTIF_LIQ_TRGT.TEST1.NAME
+Unexpected Column(s): NONE
+Changed Column(s): NONE
+Missing Foreign Key(s): NONE
+Unexpected Foreign Key(s): NONE
+Changed Foreign Key(s): NONE
+Missing Index(s): 
+     SYS_C006996 UNIQUE  ON CERTIF_LIQ_TRGT.TEST1(ID)
+Unexpected Index(s): NONE
+Changed Index(s): NONE
+Missing Primary Key(s): 
+     SYS_C006996 on CERTIF_LIQ_TRGT.TEST1(ID)
+Unexpected Primary Key(s): NONE
+Changed Primary Key(s): NONE
+Missing Sequence(s): NONE
+Unexpected Sequence(s): NONE
+Changed Sequence(s): NONE
+Missing Table(s): 
+     TEST1
+Unexpected Table(s): NONE
+Changed Table(s): NONE
+Missing Unique Constraint(s): NONE
+Unexpected Unique Constraint(s): NONE
+Changed Unique Constraint(s): NONE
+Missing View(s): NONE
+Unexpected View(s): NONE
+Changed View(s): NONE

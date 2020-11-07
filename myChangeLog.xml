@@ -17,4 +17,64 @@ http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
             <column name="active" type="boolean" defaultValueBoolean="true" />
         </createTable>
     </changeSet>
+
+    <changeSet author="Gailor PETEMOYA" id="1">
+
+        <preConditions onFail="MARK_RAN">
+            <sqlCheck expectedResult="0">SELECT COUNT(*) FROM department1234 WHERE ID=2512</sqlCheck>
+        </preConditions>
+
+        <insert tableName="department1234">
+            <column name="id">2512</column>
+            <column name="firstname">Gailor</column>
+            <column name="lastname">PETEMOYA</column>
+        </insert>
+        <insert tableName="department1234">
+            <column name="id">1225</column>
+            <column name="firstname">Yukihiro</column>
+            <column name="lastname">MATSUMOTO</column>
+            <column name="active">0</column>
+        </insert>
+
+        <rollback>
+            <delete tableName="department1234">
+                <where>ID=1225</where>
+            </delete>
+            <delete tableName="department1234">
+                <where>ID=2512</where>
+            </delete>
+        </rollback>
+    </changeSet>
+    <changeSet author="ultron (generated)" id="1604787918557-1">
+        <createTable tableName="TEST1" tablespace="SYSTEM">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ultron (generated)" id="1604787967460-1">
+        <createTable tableName="TEST1" tablespace="SYSTEM">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ultron (generated)" id="1604788056742-1">
+        <createTable tableName="TEST1" tablespace="SYSTEM">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ultron (generated)" id="1604788072016-1">
+        <createTable tableName="TEST1" tablespace="SYSTEM">
+            <column name="ID" type="NUMBER(*, 0)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="SYS_C006996"/>
+            </column>
+            <column name="NAME" type="VARCHAR2(255 BYTE)"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
