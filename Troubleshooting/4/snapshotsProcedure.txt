@@ -1,0 +1,9 @@
+Comparing Snapshots to a Database
+
+    Step 1: Configure your liquibase.properties file
+    Step 2: Run the update command
+    Step 3: Run the snapshot command
+    Step 4: Manually change the local development database
+    Step 5: Append changes to your changelog
+    Step 6: Review your changelog and mark them as deployed
+    Step 7: Commit your changes to your source control

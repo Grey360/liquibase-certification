@@ -1,1 +1,0 @@
-# Liquibase Fundamentals Certification Evaluation
