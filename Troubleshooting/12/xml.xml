@@ -5,17 +5,18 @@
         xmlns:pro="http://www.liquibase.org/xml/ns/pro"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd
     http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.0.xsd ">
-
-    <changeSet id="14" author="liquibase">
-        <createTable tableName="countries">
+    
+<changeSet id="15" author="liquibase">
+        <createTable tableName="person1">
             <column name="id" type="int">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="name" type="varchar(60)">
+            <column name="name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="abbreviation_4char" type="varchar(4)"/>
-            <column name="abbreviation_2char" type="varchar(2)"/>
+            <column name="address1" type="varchar(50)"/>
+            <column name="address2" type="varchar(50)"/>
+            <column name="city" type="varchar(30)"/>
         </createTable>
     </changeSet>
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.0.xsd ">
+
+    <changeSet id="18" author="liquibase">
+        <createTable tableName="country1">
+            <column name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city1" type="varchar(50)"/>
+            <column name="city2" type="varchar(50)"/>
+            <column name="address" type="varchar(30)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="19" author="liquibase">
+        <createTable tableName="country2">
+            <column name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="city3" type="varchar(50)"/>
+            <column name="city4" type="varchar(50)"/>
+            <column name="address" type="varchar(30)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
